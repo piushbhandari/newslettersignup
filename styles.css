@@ -2,10 +2,11 @@
 /* variables */
 :root {
   /* colors */
-  --color-base: #02073e;
+  --color-base: #242742;
   --color-black: black;
   --color-white: white;
   --color-primary: #ea3a60;
+  --bg-navy: #36384d;
 
   /* containers */
   --container-default: 92.8rem;
@@ -14,6 +15,9 @@
   --container-large: 144rem;
   --container-gutter: 2.4rem;
 
+  /* media queries */
+
+  --medium-bp: 59.375em;
   /* fonts */
   --primary-font: "Roboto", sans-serif;
 
@@ -316,7 +320,7 @@ h1,
   line-height: 100%;
   margin-bottom: 2.4rem;
 }
-@media all and (min-width: 48em) {
+@media all and (min-width: 59.375em) {
   h1,
   .h1 {
     font-size: 5.6rem;
@@ -492,17 +496,74 @@ a {
 /* newsletter signup */
 
 body {
+  background: var(--bg-navy);
+}
+.newsletter-box,
+.subscribe-box {
+  background: var(--color-white);
+}
+.newsletter-box {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 40px;
+}
+.subscribe-box {
+  display: none;
+}
+.newsletter-box__img.desktop {
+  display: none;
+}
+.newsletter-box__col1 {
+  padding: 0 24px 40px 24px;
+}
+.newsletter-box__sub {
+  margin-bottom: 25px;
+}
+.feature-listing {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 41px;
+}
+.feature-listing__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+@media all and (min-width: 59.375em) {
+  body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.newsletter-box{
-
-}
-.subscribe-box{
+  }
+  .newsletter-box,
+  .subscribe-box {
+    box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 36px;
+  }
+  .newsletter-box {
+    padding: 24px 24px 24px 64px;
+    flex-direction: row;
+    align-items: center;
+    gap: 64px;
+  }
+  .newsletter-box__img.mobile {
     display: none;
-}
-@media all and (min-width: 48em){
+  }
+  .newsletter-box__img.desktop {
+    display: block;
+  }
+  .newsletter-box__col1 {
+    padding: 0;
+  }
 
+  .feature-listing {
+    gap: 14px;
+  }
+  .feature-listing__item {
+    align-items: center;
+  }
+  .subscribe-box {
+  }
 }
