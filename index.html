@@ -11,7 +11,7 @@
   <body>
     <main class="site-main">
       <!-- signup -->
-      <div class="newsletter-box container">
+      <div class="newsletter-box container" id="newsletter-box">
         <div class="newsletter-box__col1">
           <h1 class="newsletter-box__title">Stay updated!</h1>
           <p class="newsletter-box__sub">
@@ -33,7 +33,12 @@
             </li>
           </ul>
 
-          <form action="" class="newsletter-form">
+          <form
+            onsubmit="return false;"
+            action=""
+            class="newsletter-form"
+            id="newsletter-form"
+          >
             <div class="newsletter-form__top">
               <label for="newsletter-email" class="newsletter-form__label">
                 Email address
@@ -74,16 +79,18 @@
       </div>
 
       <!-- thank you message -->
-      <div class="subscribe-box container container--small hide">
+      <div class="subscribe-box container container--small hide" id="subscribe-box">
         <img
+          `
           src="./assets/images/icon-success.svg"
           alt=""
           class="subscribe-box__icon"
         />
         <h1 class="subscribe-box__title">Thanks for subscribing!</h1>
         <p class="subscribe-box__text">
-          A confirmation email has been sent to <span class="bold">ash@loremcompany.com</span>. Please
-          open it and click the button inside to confirm your subscription.
+          A confirmation email has been sent to
+          <span class="bold">ash@loremcompany.com</span>. Please open it and
+          click the button inside to confirm your subscription.
         </p>
 
         <button
