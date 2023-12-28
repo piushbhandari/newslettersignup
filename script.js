@@ -4,6 +4,7 @@
   const errMsgElement = document.querySelector("#error-msg");
   const newsletterBox = document.querySelector("#newsletter-box");
   const subBox = document.querySelector("#subscribe-box");
+  const emailText = document.querySelector("#email-sub");
 
   let errMsg = "";
 
@@ -18,6 +19,7 @@
     } else if (isEmailValid) {
       errMsgElement.classList.remove("show");
       emailInput.classList.remove("error");
+      emailText.textContent = emailInput.value;
       emailInput.value = "";
       newsletterBox.classList.add("hide");
       subBox.classList.remove("hide");
