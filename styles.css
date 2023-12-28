@@ -658,9 +658,11 @@ a {
     display: block;
   }
   .newsletter-box__col1 {
-    padding: 0;
+    padding: 74px 0;
   }
-
+  .newsletter-box__col2 {
+    flex-shrink: 0;
+  }
   .feature-listing {
     gap: 14px;
   }
