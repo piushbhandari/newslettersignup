@@ -52,7 +52,7 @@
 
             <button
               type="button"
-              class="newsletter-form__submit"
+              class="newsletter-form__submit primary-button"
               id="newsletter-submit"
             >
               <span>Subscribe to monthly newsletter</span>
@@ -74,15 +74,25 @@
       </div>
 
       <!-- thank you message -->
-      <div class="subscribe-box container container--small">
-
-        <img src="./assets/images/icon-success.svg" alt="" class="subscribe-box__icon">
-        <h1>Thanks for subscribing!</h1>
+      <div class="subscribe-box container container--small hide">
+        <img
+          src="./assets/images/icon-success.svg"
+          alt=""
+          class="subscribe-box__icon"
+        />
+        <h1 class="subscribe-box__title">Thanks for subscribing!</h1>
         <p class="subscribe-box__text">
-            A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.
+          A confirmation email has been sent to <span class="bold">ash@loremcompany.com</span>. Please
+          open it and click the button inside to confirm your subscription.
         </p>
 
-        <button type="button" class="subscribe-box__btn" id="go-away">Dismiss message</button>
+        <button
+          type="button"
+          class="subscribe-box__btn primary-button"
+          id="go-away"
+        >
+          <span>Dismiss message</span>
+        </button>
       </div>
     </main>
 
